@@ -1,6 +1,8 @@
 # medication-app-on-Docker-Tomcat-NodeJS-servers
 
-"Smart Medication List" project for a class.  This website application is a template that allows hospital patients to view their medication information.  Care was taken in ensuring this medication information is complete and easy to understand.  Patients can see their dosage schedules and dosage amounts for each drug, as well as an "english" (as opposed to "doctor" language) description of each drug.  Additionally, patients are able to view their medication in the Unified Medication Schedule format to make it easier to understand when to take their drugs.
+"Smart Medication List" project for a class.
+
+This website application is a template that allows hospital patients to view their medication information.  Care was taken in ensuring this medication information is complete and easy to understand.  Patients can see their dosage schedules and dosage amounts for each drug, as well as an "english" (as opposed to "doctor" language) description of each drug.  Additionally, patients are able to view their medication in the Unified Medication Schedule format to make it easier to understand when to take their drugs.
 
 For this application, the medication information is generated and pulled from [this public FHIR database](http://hapi.fhir.org/baseDstu3/).  In the real world, U.S. hospitals are required by the HL7 directive to use the FHIR standard for their patient database.  This application would thus be easy to integrate into a hospital's system.
 
@@ -13,12 +15,12 @@ To view local Docker version:
 1. Download a .ZIP file of the the project from this repository
 1. Unzip the file
 1. Open your computer's shell program
-1. Navigate to the `...\Smart-Medication-List\Smart.Medication.List.Web` directory
+1. Navigate to the `\Smart.Medication.List.Web` directory
 1. run these commands in your shell:
    1. `docker image build --build-arg \_\_API_URL\_\_=http://localhost:8081 -t sml_web .`
    1. `docker container run --rm -p 8080:4000 -it sml_web`
 1. Open another shell
-1. Navigate to the `...\Smart-Medication-List\net.smartmedicationlist.web` directory
+1. Navigate to the `...\net.smartmedicationlist.web` directory
 1. run these commands in your shell:
    1. `docker image build -t sml .`
    1. `docker container run --rm -p 8081:8080 -it sml`

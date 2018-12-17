@@ -1,5 +1,11 @@
 # medication-app-on-Docker-Tomcat-NodeJS-servers
 
+"Smart Medication List" project for a class.  This website application is a template that allows hospital patients to view their medication information.  Care was taken in ensuring this medication information is complete and easy to understand.  Patients can see their dosage schedules and amount for each drug, as well as an "english" (as opposed to "doctor" language) description of each drug.  Additionally, patients are able to view their medication in the Unified Medication Schedule format to make it easier to understand when to take their drugs.
+
+For this application, the medication information is generated and viewed on [this public FHIR server](http://hapi.fhir.org/baseDstu3/).  In the real world, U.S. hospitals are required by the HL7 directive to use FHIR as their database.  This application would thus be easy to integrate into a hospital's system.
+
+This app uses a frontend  
+
 To view hosted version:
 -
 1. Go to https://cs6440-f18-prj31.apps.hdap.gatech.edu/

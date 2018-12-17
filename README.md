@@ -8,6 +8,9 @@ For this application, the medication information is generated and pulled from [t
 
 This app uses an Apache Tomcat server as the backend, to take advantage of the most popular FHIR API which is for Java, namely [HAPI FHIR](http://hapifhir.io/).  A separate server was implemented as the frontend, namely a NodeJS server, to take advantage of the easy-to-use frontend web framework it provides.
 
+Below is a screenshot of the deployed app:
+
+![image](https://raw.githubusercontent.com/vicb1/medication-app-on-Docker-Tomcat-NodeJS-servers/master/screenshot.png)
 
 To view local Docker version:
 -

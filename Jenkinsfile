@@ -15,11 +15,11 @@ pipeline{
                 script{
                     docker.withRegistry('https://build.hdap.gatech.edu'){
                         //Build and push the web server image
-                        def applicationImage = docker.build("sml2:1.0","-f ./net.smartmedicationlist.web/Dockerfile ./net.smartmedicationlist.web")
+                        def applicationImage = docker.build("sml2:1.0","-f ./tomcat_backend/Dockerfile ./tomcat_backend")
                         applicationImage.push('latest')
 
                         //Build and push the web UI image
-                        def webGuiImage = docker.build("sml-web:1.0","-f ./Smart.Medication.List.Web/Dockerfile ./Smart.Medication.List.Web")
+                        def webGuiImage = docker.build("sml-web:1.0","-f ./nodejs_frontend/Dockerfile ./nodejs_frontend")
                         webGuiImage.push('latest')
                     }
                 }

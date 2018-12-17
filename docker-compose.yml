@@ -2,7 +2,7 @@ version: '3.3'
 services:
   sml:
     build:
-      context: ./net.smartmedicationlist.web
+      context: ./tomcat_backend
       dockerfile: Dockerfile
     restart: always
     ports:
@@ -11,7 +11,7 @@ services:
 
   sml-web:
     build:
-      context: ./Smart.Medication.List.Web
+      context: ./nodejs_frontend
       dockerfile: Dockerfile
       args:
         - __API_URL__=${__API_URL__}

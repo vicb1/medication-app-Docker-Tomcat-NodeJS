@@ -17,7 +17,7 @@ To view local Docker version:
 1. Open your computer's shell program
 1. Navigate to the `\Smart.Medication.List.Web` directory
 1. run these commands in your shell:
-   1. `docker image build --build-arg \_\_API_URL\_\_=http://localhost:8081 -t sml_web .`
+   1. `docker image build --build-arg __API_URL__=http://localhost:8081 -t sml_web .`
    1. `docker container run --rm -p 8080:4000 -it sml_web`
 1. Open another shell
 1. Navigate to the `...\net.smartmedicationlist.web` directory

@@ -15,12 +15,12 @@ To view local Docker version:
 1. Download a .ZIP file of the the project from this repository
 1. Unzip the file
 1. Open your computer's shell program
-1. Navigate to the `\Smart.Medication.List.Web` directory
+1. Navigate to the `\nodejs_frontend` directory
 1. run these commands in your shell:
    1. `docker image build --build-arg __API_URL__=http://localhost:8081 -t sml_web .`
    1. `docker container run --rm -p 8080:4000 -it sml_web`
 1. Open another shell
-1. Navigate to the `...\net.smartmedicationlist.web` directory
+1. Navigate to the `...\tomcat_backend` directory
 1. run these commands in your shell:
    1. `docker image build -t sml .`
    1. `docker container run --rm -p 8081:8080 -it sml`

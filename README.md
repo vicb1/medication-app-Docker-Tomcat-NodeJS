@@ -28,7 +28,7 @@ To view local Docker version:
    1. `docker image build -t sml .`
    1. `docker container run --rm -p 8081:8080 -it sml`
 1. Go to this URL and enter any login: http://localhost:8080/
-1. On the Dashboard page.  A patient ID must be entered from [this public FHIR database](http://hapi.fhir.org/baseDstu3/), the FHIR database which this app interfaces with
+1. Go to the Dashboard page.  A patient ID must be entered from [this public FHIR database](http://hapi.fhir.org/baseDstu3/), the FHIR database which this app interfaces with
    1. A new patient ID can be created in this FHIR database for testing by going to either of these pages:
       1. http://localhost:8080/sml2/addPatient
       1. http://localhost:8080/sml2/addPatient2
@@ -37,7 +37,7 @@ To view local Docker version:
 To view hosted version:
 -
 1. Go to this URL and enter any login: https://cs6440-f18-prj31.apps.hdap.gatech.edu/
-1. On the Dashboard page.  A patient ID must be entered from [this public FHIR database](http://hapi.fhir.org/baseDstu3/), the FHIR database which this app interfaces with
+1. Go to the Dashboard page.  A patient ID must be entered from [this public FHIR database](http://hapi.fhir.org/baseDstu3/), the FHIR database which this app interfaces with
    1. A new patient ID can be created in this FHIR database for testing by going to either of these pages:
       1. https://cs6440-f18-prj31.apps.hdap.gatech.edu/sml2/addPatient
       1. https://cs6440-f18-prj31.apps.hdap.gatech.edu/sml2/addPatient2

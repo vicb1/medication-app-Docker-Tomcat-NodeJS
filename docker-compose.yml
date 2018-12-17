@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  sml:
+    build:
+      context: ./TomcatServer
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8081:8080"
+    command: ["catalina.sh","run"]
+
+  sml-web:
+    build:
+      context: ./NodejsServer
+      dockerfile: Dockerfile
+      args:
+        - __API_URL__=${__API_URL__}
+    restart: always
+    ports:
+      - "8080:4000"
+    command: ["npm","run", "build"]

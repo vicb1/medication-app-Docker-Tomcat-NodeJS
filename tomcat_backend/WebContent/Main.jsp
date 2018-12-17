@@ -4,20 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Smart Medication List - Team Eastcoasters</title>
+<title>Smart Medication List</title>
 </head>
 <body>
-Welcome <strong>${param["name"]}</strong>
-<br>
-<br>
-<strong>Testing succeeded by: </strong>
-<br>
-Sean
-<br>
-Victor3
-<br>
-Krit
-<br>
-Jim
+Welcome to the backend <strong>${param["name"]}</strong>
+
 </body>
 </html>

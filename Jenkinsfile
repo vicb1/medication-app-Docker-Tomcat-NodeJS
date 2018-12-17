@@ -13,15 +13,14 @@ pipeline{
                 //element. The script below registers the Rancher Docker registry with the Docker instance used by
                 //the Jenkins Pipeline, builds a Docker image of the project, and pushes it to the registry.
                 script{
-                    docker.withRegistry('https://build.yourdomain.com'){
+                    docker.withRegistry('https://build.hdap.gatech.edu'){
                         //Build and push the web server image
-                        def applicationImage = docker.build("sml2:1.0","-f ./TomcatServer/Dockerfile ./TomcatServer")
+                        def applicationImage = docker.build("sml2:1.0","-f ./net.smartmedicationlist.web/Dockerfile ./net.smartmedicationlist.web")
                         applicationImage.push('latest')
 
                         //Build and push the web UI image
-                        def webGuiImage = docker.build("sml-web:1.0","-f ./NodejsServer/Dockerfile ./NodejsServer")
+                        def webGuiImage = docker.build("sml-web:1.0","-f ./Smart.Medication.List.Web/Dockerfile ./Smart.Medication.List.Web")
                         webGuiImage.push('latest')
-
                     }
                 }
             }
@@ -30,8 +29,8 @@ pipeline{
         stage('Notify') {
             steps {
                 script {
-                    rancher confirm: true, credentialId: 'rancher-server', endpoint: 'https://rancher.yourdomain.com/v2-beta', environmentId: '1a7', environments: '', image: 'build.yourdomain.com/sml2:latest', ports: '', service: 'myService/sml2', timeout: 50
-                    rancher confirm: true, credentialId: 'rancher-server', endpoint: 'https://rancher.yourdomain.com/v2-beta', environmentId: '1a7', environments: '', image: 'build.yourdomain.com/sml-web:latest', ports: '', service: 'myService/sml-web', timeout: 50
+                    rancher confirm: true, credentialId: 'rancher-server', endpoint: 'https://rancher.hdap.gatech.edu/v2-beta', environmentId: '1a7', environments: '', image: 'build.hdap.gatech.edu/sml2:latest', ports: '', service: 'SmartMedList/sml2', timeout: 50
+                    rancher confirm: true, credentialId: 'rancher-server', endpoint: 'https://rancher.hdap.gatech.edu/v2-beta', environmentId: '1a7', environments: '', image: 'build.hdap.gatech.edu/sml-web:latest', ports: '', service: 'SmartMedList/sml-web', timeout: 50
                 }
             }
         }

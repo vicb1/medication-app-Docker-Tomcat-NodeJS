@@ -1,4 +1,4 @@
-# Smart-Medication-List
+# medication-app-on-Docker-Tomcat-NodeJS-servers
 
 To view hosted version:
 -

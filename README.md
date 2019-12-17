@@ -1,4 +1,4 @@
-# medication-app-on-Docker-Tomcat-NodeJS-servers
+# medication-app-Docker-Tomcat-NodeJS
 
 "Smart Medication List" project for a class.
 
